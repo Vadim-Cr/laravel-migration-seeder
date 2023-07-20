@@ -20,7 +20,7 @@ class RaylwayFactory extends Factory
             'company'=> fake() -> company(),
             'start_station'=> fake() -> city(),
             'end_station'=> fake() -> city(),
-            'departure_time'=> fake() -> dateTimeBetween('-2 day', '-1 day'),
+            'departure_time'=> fake() -> dateTimeBetween('-3 day', '-2 day'),
             'arrival_time'=> fake() -> dateTimeBetween('-1 day', '0 day'),
             'train_code'=> fake() -> unique()-> numerify('##########'),
             'carriage_count'=> fake() -> numberBetween(1, 20),
@@ -29,5 +29,3 @@ class RaylwayFactory extends Factory
         ];
     }
 }
-
-php artisan make:seeder RaylwayTableSeeder
